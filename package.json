@@ -2,7 +2,7 @@
 	"name":"wallet",
 	"dependencies":{
 		"express":"*",
-		"jshtml":"*",
+		"jade":"*",
 		"mysql":"*",
 		"should":"*",
 		"async":"*",
