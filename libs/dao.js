@@ -186,6 +186,7 @@ function onCreateDao() {
 			},
 			f01 : function(callback) {
 				console.log('user.create: insert into wallet_user.');
+				console.log('username:'+request.username+'password:'+request.password);
 				var pwdDigest = crypto.createHash('md5').update(
 						request.password, 'utf8').digest('hex').toUpperCase();
 

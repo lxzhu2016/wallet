@@ -24,22 +24,22 @@ app.configure('development', function() {
 	app.use(express.errorHandler());
 });
 
-app.get('/', function(req, res) {
-	res.render('index', {
+app.get('/:view', function(req, res) {
+	res.render(req.params.view, {
 		title : 'zhu liangxiong'
 	});
 });
 
-//TODO config express so it treat html as dynamic pages.
-app.get('/:view.html',function(req,res){
-	
-});
+
 
 app.get('/api/:method', function(req, res) {
+	console.log('"get" to method '+req.params.method);
 	api.resolve(req.params.method,'get')(req,res);
 });
 
 app.post('/api/:method',function(req,res){
+	console.log('"post" to method '+req.params.method);
+	console.log("req.is('json')"+req.is('json'));
 	api.resolve(req.params.method,'post')(req,res);
 });
 
