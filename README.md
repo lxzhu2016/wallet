@@ -1,20 +1,4 @@
-
-
 # wallet
-
-
-
-## Usage
-
-
-
-## Developing
-
-
-
-### Tools
-
-Created with [Nodeclipse](https://github.com/Nodeclipse/nodeclipse-1)
- ([Eclipse Marketplace](http://marketplace.eclipse.org/content/nodeclipse), [site](http://www.nodeclipse.org))   
-
-Nodeclipse is free open-source project that grows with your contributions.
+This project is created to learn nodejs stack, but provide a usable product as well. 
+## models
+The whole product is built based on "user", "person", "account" ,"account tag", "transaction" , and "report".
