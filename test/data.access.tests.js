@@ -5,11 +5,13 @@ var dao = require("../libs/dao.js").createDao();
 function onBefore(done) {
 	var tasks = {
 		f00 : function(callback) {
+			//console.log(dao.context);
 			dao.open(null, function(result) {
 				callback(result.error, result);
 			});
 		},
 		f01 : function(callback) {
+			//console.log(dao.context);
 			dao.reset({
 				scriptFile : './test/test.sql'
 			}, function(result) {
@@ -17,12 +19,14 @@ function onBefore(done) {
 			});
 		},
 		f02 : function(callback) {
+			//console.log(dao.context);
 			dao.close(null, function(result) {
 				callback(result.error, result);
 			});
 		}
 	};
 	function lastCallback(error, results) {
+		//console.log(dao.context);
 		should.not.exist(error);
 		should.exist(results);
 		should.exist(results.f00);

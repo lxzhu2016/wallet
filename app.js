@@ -38,8 +38,7 @@ app.get('/api/:method', function(req, res) {
 });
 
 app.post('/api/:method',function(req,res){
-	console.log('"post" to method '+req.params.method);
-	console.log("req.is('json')"+req.is('json'));
+	console.log('"post" to method '+req.params.method);	
 	api.resolve(req.params.method,'post')(req,res);
 });
 

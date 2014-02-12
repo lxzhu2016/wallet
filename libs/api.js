@@ -198,8 +198,7 @@ function create_user(it){
 				f00:function(callback){
 					pri.openDao(it, callback);
 				},
-				f01:function(callback){
-					console.log(req.body);
+				f01:function(callback){					
 					it.dao.user.create({
 						username:req.body.username,
 						password:req.body.password
